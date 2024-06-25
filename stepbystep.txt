@@ -1,0 +1,53 @@
+1- Cria um ambiente virtual (Digitar comando no terminal)
+    python -m venv venv
+2- Activar o ambiente virtual
+    .\venv\Scripts\activate
+3- Istalar os pacotes que serão usados 
+    pip install django
+    pip install pillow
+    pip install pylint-django
+    ...
+4-Criar o projeto Django 
+    django-admin startproject loja . <caso de erro usar este outro comando> python -m django startproject loja .     
+5- Criar apps 
+    python manage.py startapp produto
+    python manage.py startapp pedido
+    python manage.py startapp perfil 
+
+6- Caso for usar o SQL Server Fazer configuração neste passo, caso for usar SQL Lite seguir para o proximo
+    SQL Connection SQL-Server
+    instalar > pip install mssql-django
+
+    “#Conexão para banco SQL Server
+        DATABASES = {
+            'default': {
+                'ENGINE': 'mssql',
+                'NAME': 'db_name',
+                'USER': 'username',
+                'PASSWORD': 'user-PASSWORD',
+                'HOST': 'host-NAME',
+                'PORT': '',
+
+                'OPTIONS': {
+                    'driver': 'ODBC Driver 17 for SQL Server',  # Driver ODBC para SQL Server
+                    'extra_params': 'TrustServerCertificate=yes;',  # Parâmetro adicional de segurança (opcional)
+                },    
+            },
+        }
+7- Criar Estrutura do projeto no banco de dados 
+    python .\manage.py migrate
+8- Criar Usuario admin 
+    python .\manage.py createsuperuser
+    *Apos este comando preencher os dados de login do usuario admin
+
+9- Testar o servidor 
+    python .\manage.py runserver
+
+10- Mudar variveis de hora e indioma no arquivo loja/settings.py
+    LANGUAGE_CODE = "pt-BR"
+    TIME_ZONE = "America/Sao_Paulo"
+
+
+
+
+
