@@ -1,0 +1,7 @@
+Proposta do projeto 
+Fazer a pagina do ecommerce 
+Onde os usurios poderão 
+-Listar produtos 
+-Adicionar produtos ao carrinho 
+-remover produtos do carrinho
+-finalizar 
