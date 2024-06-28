@@ -1,3 +1,6 @@
+PAsso a passo para criar um projeto em Django
+
+
 1- Cria um ambiente virtual (Digitar comando no terminal)
     python -m venv venv
 2- Activar o ambiente virtual
